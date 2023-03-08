@@ -1,0 +1,72 @@
+// styles.scss
+
+// Import Bootstrap SCSS
+@import "~bootstrap/scss/bootstrap";
+
+// Custom styles
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    color: darken($primary-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  .nav-link {
+    color: $secondary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.form-control:focus {
+  border-color: $primary-color;
+  box-shadow: none;
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border-color: #ced4da;
+  color: #6c757d;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
